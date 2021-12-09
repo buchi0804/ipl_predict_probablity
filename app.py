@@ -1,7 +1,6 @@
 import streamlit as st
 import pickle
 import pandas as pd
-from PIL import Image
 
 teams = ['Sunrisers Hyderabad',
  'Mumbai Indians',
@@ -56,10 +55,7 @@ if st.button('Predict Probability'):
     win = result[0][1]
     st.header(batting_team + "- " + str(round(win*100)) + "%")
     st.header(bowling_team + "- " + str(round(loss*100)) + "%")
-    image = Image.open(batting_team+'.jpg')
-    st.image(image, caption=batting_team)
-    image1 = Image.open(bowling_team+'.jpg')
-    st.image(image1, caption=bowling_team)
+
 
 
 
